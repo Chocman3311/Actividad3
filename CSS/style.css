@@ -22,14 +22,29 @@ h5 {
 
 .acercadeTexto{
     text-align: center;
-    margin-left: 36%;
-    width: 25%;
     color: white;
-    font-size: x-small;
 }
 
 .siguenosEn{
-    margin-left: 45%;
+    text-align: center;
     padding-top: 100px;
+    color: white;
+}
+
+.infoAutomotriz{
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+}
+
+.infoMaquinaria{
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+}
+
+.infoInstalaciones{
+    display: inline-block;
+    vertical-align: top;
     color: white;
 }
