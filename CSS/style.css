@@ -11,3 +11,10 @@
 h5 {
     font-size: 3.25rem;
 }
+.carousel-caption.d-none.d-md-block{
+    text-align: auto;
+    margin: auto;
+    padding: 3px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50);
+}
