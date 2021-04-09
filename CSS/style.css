@@ -23,6 +23,9 @@ h5 {
 .acercadeTexto{
     text-align: center;
     color: white;
+    width: 50%;
+    margin-left: 370px;
+    padding: 35px;
 }
 
 .siguenosEn{
