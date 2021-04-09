@@ -19,3 +19,17 @@ h5 {
     top: 50%;
   
 }
+
+.acercadeTexto{
+    text-align: center;
+    margin-left: 36%;
+    width: 25%;
+    color: white;
+    font-size: x-small;
+}
+
+.siguenosEn{
+    margin-left: 45%;
+    padding-top: 100px;
+    color: white;
+}
