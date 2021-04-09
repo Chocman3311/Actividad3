@@ -1,5 +1,21 @@
 .fotito{
     margin: auto;
-    width: 22%;
+    width: 25%;
 }
 
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 4.5rem;
+}
+
+h5 {
+    font-size: 3.25rem;
+}
+.carousel-caption.d-none.d-md-block{
+    color: rgb(128, 201, 10);
+    text-align: auto;
+    margin: auto;
+    padding: 3px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50);
+}
