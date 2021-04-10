@@ -6,7 +6,8 @@ h5 {
     font-size: 3.25rem;
 }
 .carousel-caption.d-none.d-md-block{
-    color: rgb(255, 255, 255);
+    font-family:Impact;
+    color: rgba(11, 220, 0, 0.802);
     margin: auto;
     top: 30%;
     right:60%;
@@ -15,7 +16,7 @@ h5 {
 
 .acercadeTexto{
     text-align: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.905);
     width: 50%;
     margin-left: 330px;
     padding: 5px;
