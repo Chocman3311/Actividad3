@@ -40,3 +40,12 @@ h5 {
 .imagen1{ padding-right: 30px;}
 
 .imagen3{ padding-left: 30px;}
+
+.btn.btn-primary{
+    text-align: center;
+    padding-right: 100px;   
+    margin: center;
+    padding-left: 100px ;
+}
+
+
