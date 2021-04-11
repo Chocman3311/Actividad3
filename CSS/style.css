@@ -32,20 +32,11 @@ h5 {
     margin: auto;
     width: 50%;
 }
-
-.imagen1{
-    margin: auto;
-    float: right;
-    top: 70%;
-    padding: 10px;
-    
-}
-
-
-.imagen3{
-    display: flex;
-    margin: auto;
+.imagenes{
     text-align: center;
-    float: top;
-    top: 100%;
+    padding-top: 100px;
 }
+
+.imagen1{ padding-right: 30px;}
+
+.imagen3{ padding-left: 30px;}
