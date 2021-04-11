@@ -41,4 +41,11 @@ h5 {
 
 .imagen3{ padding-left: 30px;}
 
+.btn.btn-primary{
+    text-align: center;
+    padding-right: 100px;   
+    margin: center;
+    padding-left: 100px ;
+}
+
 .form-label{color: white;}
