@@ -34,18 +34,17 @@ h5 {
 }
 .imagenes{
     text-align: center;
-    padding-top: 100px;
 }
 
 .imagen1{ padding-right: 30px;}
 
 .imagen3{ padding-left: 30px;}
 
-.btn.btn-primary{
-    text-align: center;
-    padding-right: 100px;   
-    margin: center;
-    padding-left: 100px ;
-}
 
 .form-label{color: white;}
+
+.h4, h4{color:white ;
+    text-align: center;}
+
+.textoraro{color: white;
+padding-top: 20px;}
