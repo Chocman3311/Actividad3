@@ -19,6 +19,7 @@ h5 {
     color: rgba(255, 255, 255, 0.905);
     width: 50%;
     margin-left: 25%;
+
 }
 
 .siguenosEn{
@@ -31,16 +32,14 @@ h5 {
     margin: auto;
     width: 24%;
 }
-.imagenes{
-    text-align: center;
-}
-
-.imagen1{ padding-right: 30px;}
-
-.imagen3{ padding-left: 30px;}
-
 
 .form-label{color: white;}
 
 .h4, h4{color:white ;
     text-align: center;}
+
+.btn.btn-primary{
+    margin-left: 40%;
+    text-underline-position: unset;
+}
+
