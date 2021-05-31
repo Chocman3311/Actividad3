@@ -38,6 +38,14 @@ h5 {
 .h4, h4{color:white ;
     text-align: center;}
 
+.card{
+    background-color: rgb(45, 50, 54);
+}
+
+.card-title{
+    color: white;
+}
+
 @media only screen and (max-width: 813px) {
     .carousel-caption.d-inline.d-md-block{
         font-family:Impact;
