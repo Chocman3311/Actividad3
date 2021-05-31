@@ -71,4 +71,21 @@ h5 {
         top: 200px;
         
     }
+
+
+}
+.h1, h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    color: white;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    color: white;
+}
+td {
+    color: white;
 }
