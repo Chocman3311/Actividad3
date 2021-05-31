@@ -46,6 +46,11 @@ h5 {
     color: white;
 }
 
+.btn.btn-primary{
+    background: linear-gradient(to right, blue, #433bb8);    
+    border-color: blue;
+}
+
 @media only screen and (max-width: 813px) {
     .carousel-caption.d-inline.d-md-block{
         font-family:Impact;
