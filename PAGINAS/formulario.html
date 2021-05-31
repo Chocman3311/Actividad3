@@ -14,18 +14,17 @@
       $("#formulario").submit(
         function(){
         var mensaje ="";  
-          if($("#nombre").val().trim().length==0){
-            mensaje = "El nombre esta en blanco";
-          }
-          if($("#apellido").val().trim().length==0){
-            mensaje = "El apellido esta en blanco";
+          if($("#Textarea").val().trim().length <20){
+            mensaje = "El comentario debe tener un minimo de 20 caracteres";
           }
           if($("#email").val().trim().length==0){
             mensaje = "El email esta en blanco";
           }
-
-          if($("#Textarea").val().trim().length <20){
-            mensaje = "El comentario debe tener un minimo de 20 caracteres";
+          if($("#apellido").val().trim().length==0){
+            mensaje = "El apellido esta en blanco";
+          }
+          if($("#nombre").val().trim().length==0){
+            mensaje = "El nombre esta en blanco";
           }
 
           if(mensaje != ""){
