@@ -38,11 +38,6 @@ h5 {
 .h4, h4{color:white ;
     text-align: center;}
 
-.btn.btn-primary{
-    margin-left: 40%;
-    text-underline-position: unset;
-}
-
 @media only screen and (max-width: 813px) {
     .carousel-caption.d-inline.d-md-block{
         font-family:Impact;
