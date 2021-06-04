@@ -74,7 +74,9 @@ h5 {
     .table{
         font-size: 0.68rem;
     }
-
+    .navbar.navbar-expand-lg.navbar-dark.bg-dark,h1{
+        text-align: center;
+    }
 }
 .h1, h1 {
     font-size: calc(1.375rem + 1.5vw);
