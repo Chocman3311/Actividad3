@@ -37,26 +37,21 @@
                   $.get(`https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json&page=${numId}`
                   ,function(data){
                     $.each(data.Results,function(i,items){
-                      
+                      if(items.Mfr_CommonName === null){
+                          
+                        items.Mfr_CommonName = "NOMBRE COMÚN NO REGISTRADO"
+                          
+                        }
+                      if(items.Country == ""){
+                         
+                        items.Country = "PAIS NO ENCONTRADO"
+                         
+                        }
                     $("#categorias").append(
                               `<tr><td>${items.Mfr_ID}</td><td>${items.Mfr_CommonName}</td><td>${items.Mfr_Name}</td><td>${items.Country}</td><td></td><tr>`
                                   
                         )   
-                        $("#error").hide();
-                        
-                        if(items.Mfr_CommonName === null){
-                          
-                          $(`#categorias${items.Mfr_ID}`).append(`Nombre común no identificado`);
-                          
-                        }
-                                     
-                        if(`#categorias${items.Country}` == ""){
-                         
-                            $(`#categorias${items.Country}`).append(`Pais no registrado`);
-                            
-                        }
-                        
-                        
+                        $("#error").hide();                                                                                                                                                                                                            
                       })
                     
 
