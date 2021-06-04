@@ -12,24 +12,48 @@
     <script>
         //obtener el documento completo de HTML 
         $(document).ready(function(){
-            $("#enviar").click(function(){
-                var urlBase ="https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json&page=2"
+          $("#error").hide();
 
-                $.get(urlBase,function(data){
-                        
-                    $.each(data.Results,function(i,items){                                            
-                        $("#categorias").append(
-                            `<tr><td>${items.Mfr_ID}</td><td>${items.Mfr_CommonName}</td><td>${items.Mfr_Name}</td><td>${items.Country}</td><td></td><tr>`
-                                
-                        )
-                        if(items.Country ===  ""){
-                            
-                            $(`#categorias${items.Mfr_ID}`).append(`Pais no registrado`);
+            $("#enviar").click(function(){
+            var numId = $("#numId").val();
+            var mensaje ="";
+            
+          if($("#numId").val().trim() > 2  ){
+            mensaje = "Ingrese ID 1 o 2 Por favor";
+          }
+          if($("#numId").val().trim() == 0  ){
+            mensaje = "Ingrese ID 1 o 2 Por favor";
+          }
+
+          
+          if(mensaje != ""){
+            $("#error").html(mensaje); 
+            $("#error").show();
+            event.preventDefault();
+          }  
+           
+            else
+              
+                  $.get(`https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json&page=${numId}`
+                  ,function(data){
+                    $.each(data.Results,function(i,items){
+                    $("#categorias").append(
+                              `<tr><td>${items.Mfr_ID}</td><td>${items.Mfr_CommonName}</td><td>${items.Mfr_Name}</td><td>${items.Country}</td><td></td><tr>`
+                                  
+                        )   
+                        $("#error").hide();
+                           
+                                     
+                        if(`#categorias${items.Country}` == ""){
+                         
+                            $(`#categorias${items.Country}`).append(`Pais no registrado`);
+                            return;
                         }
                         if(items.Mfr_CommonName === null){
                           
                             $(`#categorias${items.Mfr_ID}`).append(`Nombre comun no disponible`);
                         }
+                        
                         
                     })
                     
@@ -37,7 +61,8 @@
                 })
             })
             
-        })
+          })
+
 
 </script>
 </head>
@@ -141,8 +166,14 @@
         <h1>Traer datos de mantenciones</h1>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-primary" id="enviar">Traer datos</button>
-    </div>
+      <p>Actualmente nuestra pagina consta de 2 listados de autos con sus respectivos detalles. Para buscar cada listado marque 1 o 2.</p>
+      <form id="formulario">
+        <div>
+      <label for="numId">Ingresar ID</label>
+      <input type="number" class="form-control" id="numId">
+      <button type="button" class="btn btn-primary" id="enviar">Traer datos</button>
+      </div>
+    <div>
     <table class="table" id="categorias">
         <thead>
             <tr>
@@ -157,6 +188,10 @@
         </tbody>
 
     </table>
+    <div id="error" class="alert alert-danger" role="alert"></div>
+  </div>
+  </form>
+  </div>
 </div>
 
 
