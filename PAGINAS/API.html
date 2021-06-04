@@ -17,28 +17,19 @@
 
                 $.get(urlBase,function(data){
                         
-                    $.each(data.Results,function(i,items){
-                      var tablita = `<tr>
-                                        <th scope="col">${items.Mfr_ID}</th>
-                                        <th scope="col">${items.Mfr_CommonName}</th>
-                                        <th scope="col">${items.Mfr_Name}</th>
-                                        <th scope="col">${items.Country}</th>
-                                    </tr>`
-                      $("#categorias").append(tablita)
-                      
-                        
-                        //$("#categorias").append(
-                            //`<tr><td>${items.Mfr_ID}</td><td>${items.Mfr_CommonName}</td><td>${items.Mfr_Name}</td><td>${items.Country}</td><td></td><tr>`
+                    $.each(data.Results,function(i,items){                                            
+                        $("#categorias").append(
+                            `<tr><td>${items.Mfr_ID}</td><td>${items.Mfr_CommonName}</td><td>${items.Mfr_Name}</td><td>${items.Country}</td><td></td><tr>`
                                 
-                        //)
-                        //if(items.Country ===  ""){
+                        )
+                        if(items.Country ===  ""){
                             
-                            //$(`#categorias${items.Mfr_ID}`).append(`Pais no registrado`);
-                        //}
-                        //if(items.Mfr_CommonName === null){
+                            $(`#categorias${items.Mfr_ID}`).append(`Pais no registrado`);
+                        }
+                        if(items.Mfr_CommonName === null){
                           
-                            //$(`#categorias${items.Mfr_ID}`).append(`Nombre comun no disponible`);
-                        //}
+                            $(`#categorias${items.Mfr_ID}`).append(`Nombre comun no disponible`);
+                        }
                         
                     })
                     
