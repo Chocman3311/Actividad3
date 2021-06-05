@@ -28,7 +28,7 @@ function cargarNavbar2(){
               <li><a class="dropdown-item" href="/PAGINAS/API.html">Solicitar Datos API</a></li>
             </ul>
         </ul>
-        <div class="me-4">
+        <div class="clima me-4">
         <button id="PedirClima" class="btn btn-primary">Pedir Clima</button>        
          <div class="alert m-1" role="alert" id="msg" style="color: white;">
     </div>
