@@ -7,42 +7,12 @@
 <link rel="stylesheet" href="./CSS/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="navbar.js"></script>
+<script src="./navbar.js"></script>
 <script>
  
   $(document).ready(function(){
-    cargarNavbar();
-      $("#msg").hide();
-      $("#PedirClima").click(function(){
-          
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(ShowPosition);
-}else {
-console.log("geolocalizacion is not supported by this browser");
-    }
-   
- })
-
-function ShowPosition(position) {
-  //console.log("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude);
-  var lat = position.coords.latitude;
-  var lon = position.coords.longitude;
-  var urlBase = "https://www.metaweather.com/api/location/search/?lattlong=";
-  var urlFormateada = `${urlBase}${lat},${lon}`;
-  console.log(urlFormateada);
-
-  $("#msg").show();
-  $("#msg").append(`${lat} y ${lon}`);
-  $("#PedirClima").hide();
-
-  $.get(urlFormateada,function(data){
-     // $.each(data.data,function(i, sitio){
-        console.log(data);
-      //})
-      
-
-  })
-}
+    cargarNavbar2();
+     
 
 })
 
@@ -53,7 +23,7 @@ function ShowPosition(position) {
 <body>
   
 
-  <div id="contenedor">
+  <div id="contenedor2">
 </div>
 
 

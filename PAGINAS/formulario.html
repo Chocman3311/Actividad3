@@ -35,37 +35,7 @@
             event.preventDefault();
           }
       });
-      $("#msg").hide();
-      $("#PedirClima").click(function(){
-          
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(ShowPosition);
-}else {
-console.log("geolocalizacion is not supported by this browser");
-    }
-   
- })
-
-function ShowPosition(position) {
-  //console.log("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude);
-  var lat = position.coords.latitude;
-  var lon = position.coords.longitude;
-  var urlBase = "https://www.metaweather.com/api/location/search/?lattlong=";
-  var urlFormateada = `${urlBase}${lat},${lon}`;
-  console.log(urlFormateada);
-
-  $("#msg").show();
-  $("#msg").append(`${lat} y ${lon}`);
-  $("#PedirClima").hide();
-
-  $.get(urlFormateada,function(data){
-     // $.each(data.data,function(i, sitio){
-        console.log(data);
-      //})
       
-
-  })
-}
 
     });
 </script>
