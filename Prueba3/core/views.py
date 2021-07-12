@@ -43,4 +43,5 @@ def api(request):
 
     return render(request, 'core/api.html')
 
+
 #PAGINAS
