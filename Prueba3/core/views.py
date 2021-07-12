@@ -1,4 +1,4 @@
-from core.models import Carrusel, AcercaDe
+from core.models import Carrusel, AcercaDe, FormularioContacto
 from django.shortcuts import render
 
 # Create your views here.
@@ -27,8 +27,14 @@ def acercade(request):
     return render(request, 'core/acercade.html', datosAcercade)
 
 def formulario(request):
+    varFormulario = FormularioContacto.objects.all()
 
-    return render(request, 'core/formulario.html')
+    datosFormulario = {
+        "varFormulario": varFormulario
+
+    }
+
+    return render(request, 'core/formulario.html', datosFormulario)
 
 def api(request):
 

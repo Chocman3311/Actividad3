@@ -21,3 +21,12 @@ class AcercaDe(models.Model):
     fotoSiguenos = models.ImageField(upload_to = "imgRedes", null=True)
     def __str__(self):
         return self.textoAcercade
+
+class FormularioContacto(models.Model):
+    idFormulario = models.IntegerField(primary_key=True, verbose_name="IdFormulario")
+    nombreFormulario = models.CharField(max_length=20, verbose_name="Nombre")
+    apellidoFormulario = models.CharField(max_length=20, verbose_name="Apellido")
+    emailFormulario = models.CharField(max_length=20, verbose_name="Email")
+    comentarioFormulario = models.CharField(max_length=20, verbose_name="Comentario")
+    def str(self):
+        return self.nombreFormulario
