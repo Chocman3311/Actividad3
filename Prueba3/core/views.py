@@ -1,4 +1,4 @@
-from core.models import Carrusel, AcercaDe, FormularioContacto
+from core.models import Carrusel, AcercaDe, FormularioContacto, Trabajos
 from django.shortcuts import render
 
 # Create your views here.
@@ -13,9 +13,12 @@ def index(request):
     return render(request, 'core/index.html', datos)
 
 def trabajos(request):
+    varTrabajos = Trabajos.objects.all()
+    datosTrabajos = {
+        "varTrabajos" : varTrabajos
+    }
 
-
-    return render(request, 'core/trabajos.html')
+    return render(request, 'core/trabajos.html',datosTrabajos)
 
 def acercade(request):
     varAcercaDe = AcercaDe.objects.all()

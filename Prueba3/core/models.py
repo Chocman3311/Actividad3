@@ -30,3 +30,14 @@ class FormularioContacto(models.Model):
     comentarioFormulario = models.CharField(max_length=20, verbose_name="Comentario")
     def str(self):
         return self.nombreFormulario
+
+class Trabajos(models.Model):
+    idCarta = models.IntegerField(primary_key=True, verbose_name="IdCarta")
+    imagenTrabajo = models.ImageField(upload_to = "imgTrabajos", null=True)
+    tituloTrabajo = models.CharField(max_length=50, verbose_name="Nombre Trabajo")
+    diagnostico = models.CharField(max_length=50, verbose_name="Diagnostico")
+    mecanico = models.CharField(max_length=50, verbose_name="Mecanico")
+    fecha = models.CharField(max_length=30, verbose_name="Fecha")
+    listadoMateriales = models.CharField(max_length=100, verbose_name="Listado Materiales")
+    def str(self):
+        return self.mecanico  
