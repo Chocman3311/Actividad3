@@ -13,6 +13,21 @@
   $(document).ready(function(){
     cargarNavbar2();
    
+    $("#error").hide();
+    var mensaje = "";
+
+    if($("#exampleModal").val().trim() > 6){
+            mensaje = "Esta ID no existe";
+    }
+
+    if($("#exampleModal").val().trim() <= 0 ){
+            mensaje = "Esta ID no existe";
+    }
+    if(mensaje != ""){
+            $("#error").html(mensaje); 
+            $("#error").show();
+            event.preventDefault();
+          }  
 })
 
 
@@ -157,6 +172,7 @@
       </div>
     </div>
   {%endfor%}
+  <div id="error"class="alert alert-danger" role="alert"></div>
   </div>
 </div>
 <!-- Se agregan las cartas-->
