@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import probando
+from .views import crud
 
 urlpatterns = [
-    path('', probando, name="probando")
+    path('', crud, name="crud")
 ]

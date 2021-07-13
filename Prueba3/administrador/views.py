@@ -2,6 +2,6 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def probando(request):
+def crud(request):
 
-    return render(request, 'administrador/probando.html')
+    return render(request, 'administrador/crud.html')
