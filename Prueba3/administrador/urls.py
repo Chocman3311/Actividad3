@@ -2,5 +2,5 @@ from django.urls import path
 from .views import probando
 
 urlpatterns = [
-    path('crud/', probando, name="probando")
+    path('', probando, name="probando")
 ]

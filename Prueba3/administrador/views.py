@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def probando(request):
 
-    return render(request, 'admin/probando.html')
+    return render(request, 'administrador/probando.html')
