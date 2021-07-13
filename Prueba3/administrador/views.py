@@ -32,4 +32,11 @@ def form_mod_vehiculo(request,id):
         'form':VehiculoForm(instance = vehiculo)
     }
 
+    if request.method == 'POST' :
+        formulario = VehiculoForm(data=request.POST,instance=vehiculo)
+        if formulario.is_valid:
+            formulario.save()
+
+            datos['mensaje'] = "Modificado Correctamente"
+
     return render(request, 'administrador/form_mod_vehiculo.html', datos)
