@@ -73,10 +73,12 @@
         <td>{{ve.marca}}</td>
         <td>{{ve.modelo}}</td>
         <td><a href="{% url 'form_mod_vehiculo' ve.patente %}">Modificar</a></td>
+        <td><a href="{% url 'form_del_vehiculo' ve.patente %}">Eliminar</a></td>
+
     </tr>
     {%endfor%}
 </table>
-
+<a href="{% url 'form_vehiculo'%}">Nuevo Vehiculo</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>

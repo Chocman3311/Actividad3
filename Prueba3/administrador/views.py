@@ -1,7 +1,7 @@
 
 from administrador.forms import VehiculoForm
 from administrador.models import Vehiculo
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # Create your views here.
 
 
@@ -40,3 +40,11 @@ def form_mod_vehiculo(request,id):
             datos['mensaje'] = "Modificado Correctamente"
 
     return render(request, 'administrador/form_mod_vehiculo.html', datos)
+
+def form_del_vehiculo(request, id):
+
+    vehiculo = Vehiculo.objects.get(patente=id)
+
+    vehiculo.delete()
+
+    return redirect(to='crud')
