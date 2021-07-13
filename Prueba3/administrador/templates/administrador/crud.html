@@ -72,6 +72,7 @@
         <td>{{ve.patente}}</td>
         <td>{{ve.marca}}</td>
         <td>{{ve.modelo}}</td>
+        <td><a href="{% url 'form_mod_vehiculo' ve.patente %}">Modificar</a></td>
     </tr>
     {%endfor%}
 </table>

@@ -29,7 +29,7 @@ def form_vehiculo(request):
 def form_mod_vehiculo(request,id):
     vehiculo = Vehiculo.objects.get(patente = id)
     datos = {
-        'form':VehiculoForm(instace = vehiculo)
+        'form':VehiculoForm(instance = vehiculo)
     }
 
     return render(request, 'administrador/form_mod_vehiculo.html', datos)
