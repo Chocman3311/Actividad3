@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import crud, form_vehiculo
+from .views import crud, form_vehiculo, form_mod_vehiculo
 
 urlpatterns = [
     path('', crud, name="crud"),
-    path('form-vehiculo/', form_vehiculo, name="form_vehiculo")
+    path('form-vehiculo/', form_vehiculo, name="form_vehiculo"),
+    path('form-mod-vehiculo/<id>', form_mod_vehiculo, name="form_mod_vehiculo")
 ]

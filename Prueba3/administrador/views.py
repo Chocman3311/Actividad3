@@ -25,3 +25,11 @@ def form_vehiculo(request):
             datos['mensaje'] = "Guardado Correctamente"
 
     return render(request, 'administrador/form_vehiculo.html', datos)
+
+def form_mod_vehiculo(request,id):
+    vehiculo = Vehiculo.objects.get(patente = id)
+    datos = {
+        'form':VehiculoForm(instace = vehiculo)
+    }
+
+    return render(request, 'administrador/form_mod_vehiculo.html', datos)
