@@ -2,6 +2,7 @@
 from administrador.forms import VehiculoForm
 from administrador.models import Vehiculo
 from django.shortcuts import render, redirect
+
 # Create your views here.
 
 
@@ -23,6 +24,7 @@ def form_vehiculo(request):
             formulario.save()
 
             datos['mensaje'] = "Guardado Correctamente"
+        return redirect('crud')
 
     return render(request, 'administrador/form_vehiculo.html', datos)
 
@@ -48,3 +50,6 @@ def form_del_vehiculo(request, id):
     vehiculo.delete()
 
     return redirect(to='crud')
+
+
+

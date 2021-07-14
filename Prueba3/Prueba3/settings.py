@@ -137,7 +137,7 @@ MEDAI_URL = '/img/'
  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'core/static/core/img')
  
- 
+LOGIN_REDIRECT_URL = 'crud' 
  
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

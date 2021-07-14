@@ -56,14 +56,13 @@
     </div>
     </div>
         <form class="d-flex me-4 ">
-          <a class="btn btn-primary m-4" href="#" role="button">Ingresar</a>
-          <a class="btn btn-primary m-4" href="#" role="button">Registrar</a>
+          <a class="btn btn-primary m-4" href="{% url 'login'%}" role="button">Ingresar</a>
+          <a class="btn btn-primary m-4" href="{% url 'register'%}" role="button">Registrar</a>
         </form>
         
 </div>
 </div>
 </nav>
-
 
 {%for ac in varAcercaDe%}
 <div align = "center">
