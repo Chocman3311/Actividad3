@@ -43,5 +43,8 @@ def api(request):
 
     return render(request, 'core/api.html')
 
+def login(request):
+
+    return render(request, 'administrador/login.html')
 
 #PAGINAS
